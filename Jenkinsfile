@@ -25,10 +25,13 @@ pipeline {
 		stage("GetCode"){   //阶段名称
 			steps{   //名称
 				timeout(time:5, unit:"MINUTES"){   //步骤超时时间
+					ansiColor('xterm') {
+ 						echo 'something that outputs ansi colored stuff'
+					}
 					script{	  //填写运行代码
 						println('获取代码') 
 						tools.PrintMes("获取代码",'blue')
-						printf "\e[31mHello World\e[0m\n"
+						
 
 					} 
 				} 
