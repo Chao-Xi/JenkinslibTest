@@ -1,8 +1,10 @@
-String workspace = "/home/vagrant/workspace" 
 
-@Libray('Jenkinslibrary') _
+@Libray('Jenkinslibrary') 
 
 def tools = new org.devops.tools()
+
+
+String workspace = "/home/vagrant/workspace" 
 
 //Pipeline 
 pipeline {
