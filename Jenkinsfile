@@ -1,6 +1,6 @@
 String workspace = "/home/vagrant/workspace" 
 
-@Libray('Jenkinslib') _
+@Libray('Jenkinslibrary') _
 
 def tools = new org.devops.tools()
 
