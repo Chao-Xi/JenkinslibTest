@@ -37,6 +37,7 @@ pipeline {
 				timeout(time:30, unit:"MINUTES"){ 
 					script{ 
 						print('代码扫描')
+						print u"\u001b[31mHelloWorld"
 						tools.PrintMes("代码扫描",'red')
 					} 
 				}
