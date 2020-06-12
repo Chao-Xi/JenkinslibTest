@@ -1,3 +1,5 @@
+#!groovy
+
 @Library('jenkinslib') _
 def tools = new org.devops.tools()
 
@@ -25,7 +27,7 @@ pipeline {
 				timeout(time:5, unit:"MINUTES"){   //步骤超时时间
 					script{	  //填写运行代码
 						println('获取代码') 
-						tools.PrintMes("获取代码",'red')
+						tools.PrintMes("获取代码",'blue')
 					} 
 				} 
 			} 
@@ -50,7 +52,7 @@ pipeline {
 				timeout(time:20, unit:"MINUTES"){ 
 					script{ 
 						println('应用打包')
-						tools.PrintMes("应用打包",'red')
+						tools.PrintMes("应用打包",'green')
 						
 						mvnHome = tool "m2"
                         println(mvnHome)
