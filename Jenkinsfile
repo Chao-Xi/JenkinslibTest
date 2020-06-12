@@ -28,6 +28,8 @@ pipeline {
 					script{	  //填写运行代码
 						println('获取代码') 
 						tools.PrintMes("获取代码",'blue')
+						printf "\e[31mHello World\e[0m\n"
+
 					} 
 				} 
 			} 
