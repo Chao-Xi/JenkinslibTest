@@ -1,5 +1,4 @@
-@Libray('Jenkinslibrary') 
-
+@Libray('Jenkinslib') _
 def tools = new org.devops.tools()
 
 
