@@ -30,7 +30,7 @@ pipeline {
 					}
 					script{	  //填写运行代码
 						println('获取代码') 
-						println("\033[31m Red \033[0m") 
+						println("\033\[31m Red \033\[0m") 
 						tools.PrintMes("获取代码",'blue')
 						
 
