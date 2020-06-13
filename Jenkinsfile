@@ -30,9 +30,6 @@ pipeline {
 					}
 					script{	  //填写运行代码
 						println('获取代码') 
-						public static final String ANSI_RESET = "\u001B[0m";
-						public static final String ANSI_RED = "\u001B[31m";
-						System.out.println(ANSI_RED + "This text is red!" + ANSI_RESET) 
 						tools.PrintMes("获取代码",'blue')
 						
 
