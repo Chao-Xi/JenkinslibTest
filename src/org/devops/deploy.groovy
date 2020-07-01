@@ -3,5 +3,5 @@ package org.devops
 //salt stack
 
 def SaltDeploy(host,func){
-    sh "sudo salt ${host} ${func}"
+    sh "salt ${host} ${func}"
 }
