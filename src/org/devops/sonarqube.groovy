@@ -25,5 +25,4 @@ def SonarScan(projectName,projectDesc,projectPath){
         --define sonar.java.test.binaries=target/test—classes \
         --define sonar.java.surefire.report=target/surefire—reports
     """
-    }
 }
