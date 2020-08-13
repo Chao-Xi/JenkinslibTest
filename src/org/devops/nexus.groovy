@@ -94,3 +94,4 @@ def main(uploadType){
         env.filePath = "target/${jarName}"
         NexusUpload()
     }
+}
