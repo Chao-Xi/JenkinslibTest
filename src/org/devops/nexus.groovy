@@ -43,8 +43,8 @@ def MavenUpload(){
         ${mvnHome}/bin/mvn deploy:deploy-file -Dmaven.test.skip=true  \
                                 -Dfile=${jarName} -DgroupId=${pomGroupId} \
                                 -DartifactId=${pomArtifact} -Dversion=${pomVersion}  \
-                                -Dpackaging=${pomPackaging} -DrepositoryId=maven-releases \
-                                -Durl=http://192.168.33.1:32000/repository/maven-releases 
+                                -Dpackaging=${pomPackaging} -DrepositoryId=maven-hosted \
+                                -Durl=http://192.168.33.1:32000/repository/maven-hosted 
         """
 }
 
@@ -60,7 +60,7 @@ def ArtifactUpdate(updateType,artifactUrl){
 
         //获取artifactID 
         
-        artifactUrl = artifactUrl -  "http://192.168.1.200:30083/repository/maven-releases/"
+        artifactUrl = artifactUrl -  "http://192.168.1.200:30083/repository/maven-hosted/"
         artifactUrl = artifactUrl.split("/").toList()
         
         println(artifactUrl.size())
@@ -90,7 +90,7 @@ def main(uploadType){
     if ("${uploadType}" == "maven"){
         MavenUpload()
     } else if ("${uploadType}" == "nexus") {
-        env.repoName = "maven-releases"
+        env.repoName = "maven-hosted"
         env.filePath = "target/${jarName}"
         NexusUpload()
     }
