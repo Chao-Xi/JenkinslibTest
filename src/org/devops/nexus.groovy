@@ -60,7 +60,7 @@ def ArtifactUpdate(updateType,artifactUrl){
 
         //获取artifactID 
         
-        artifactUrl = artifactUrl -  "http://192.168.1.200:30083/repository/maven-hosted/"
+        artifactUrl = artifactUrl -  "http://192.168.33.1:32000/repository/maven-hosted/"
         artifactUrl = artifactUrl.split("/").toList()
         
         println(artifactUrl.size())
