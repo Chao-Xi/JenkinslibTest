@@ -26,7 +26,7 @@ def NexusUpload(){
                                         classifier: '', 
                                         file: "${filePath}", 
                                         type: "${pomPackaging}"]], 
-                            credentialsId: 'nexus-admin-user', 
+                            credentialsId: 'nexus', 
                             groupId: "${pomGroupId}", 
                             nexusUrl: '192.168.33.1:32000', 
                             nexusVersion: 'nexus3', 
