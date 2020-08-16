@@ -7,7 +7,7 @@ def MavenBuild(buildShell){
     def rtMaven = Artifactory.newMavenBuild()
     def buildInfo
     server.connection.timeout = 300
-    server.credentialsId = 'artifactory-admin-user' 
+    server.credentialsId = 'jfrog' 
     //maven打包
     rtMaven.tool = 'm2' 
     buildInfo = Artifactory.newBuildInfo()
