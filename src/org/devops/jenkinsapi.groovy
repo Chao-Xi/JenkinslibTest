@@ -22,7 +22,7 @@ def CreateProject(projectName){
        
         sh """
         
-           curl -u ${username}:${password} -X GET 'http://127.0.0.10:30080/job/demo-project-manage/config.xml' -o config.xml
+           curl -u ${username}:${password} -X GET 'http://127.0.0.10:30080/job/test-devops-service/config.xml' -o config.xml
            ls -l 
        
            curl -u ${username}:${password} -X POST 'http://127.0.0.1:30080/createItem?name=${projectName}' -H 'Content-Type:text/xml' --data-binary @config.xml
